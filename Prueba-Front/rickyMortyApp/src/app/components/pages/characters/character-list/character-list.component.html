@@ -1,0 +1,16 @@
+<div class="row" infinite-scroll (scrolled)="onScrollDown()">
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let character of characters">
+        <app-character [character]="character"></app-character>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" *ngIf="characters.length <= 0">
+        <p>Sin resultados</p>
+    </div>
+</div>
+
+<button 
+[ngClass]="'no-hidden'"
+*ngIf="showGoUp"
+(click)="onScrollUp()" 
+class="btn btn-dark">
+    Vuelve Arriba
+</button>
