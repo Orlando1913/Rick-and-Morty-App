@@ -18,9 +18,6 @@ export class UsersService {
     return this.http.post("https://reqres.in/api/register", user);
   }
 
-  setToken(token: String) {
-    this.cookies.set("token", token);
-  }
   getToken() {
     return this.cookies.get("token");
   }
@@ -28,8 +25,5 @@ export class UsersService {
   getUser() {
     return this.http.get("https://reqres.in/api/users/2");
   }
-  getUserLogged() {
-    const token = this.getToken();
-    
-  }
+ 
 }
