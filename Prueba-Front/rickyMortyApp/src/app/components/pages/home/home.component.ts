@@ -17,7 +17,6 @@ export class HomeComponent {
 
   getUserLogged() {
     this.userService.getUser().subscribe((user) => {
-      //console.log(user);
     });
   }
 }

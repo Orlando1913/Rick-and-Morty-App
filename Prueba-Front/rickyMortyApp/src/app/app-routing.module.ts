@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login', // Cambiamos la redirección a /login
+    redirectTo: '/login',  
     pathMatch: 'full'
   },
   {
@@ -38,7 +38,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/login', // Redirigimos cualquier ruta no encontrada a /login
+    redirectTo: '/login', 
   }
 ];
 

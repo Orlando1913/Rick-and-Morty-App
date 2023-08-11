@@ -17,9 +17,7 @@ export class LoginComponentComponent {
 
   dataStorage: User | undefined;
 
-  login(): void {
-    console.log(this.localStorageService.getItem('user'));
-    
+  login(): void {    
     const registeredUser = this.localStorageService.getItem('user') as User;
     if (this.userName == registeredUser.userName && this.password == registeredUser.password) {
       this.localStorageService.setItem('loginUser', this.userName);
